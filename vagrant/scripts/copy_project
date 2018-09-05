@@ -1,0 +1,5 @@
+#!/bin/bash
+project=python-http-server-ci
+mkdir ~/projects/${project}
+cp -r /vagrant/* ~/projects/${project}
+

@@ -1,0 +1,6 @@
+#!/bin/bash
+sudo groupadd docker
+sudo usermod -aG docker vagrant
+sudo systemctl restart docker
+sudo systemctl enable docker
+
