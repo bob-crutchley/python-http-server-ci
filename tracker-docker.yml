@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql
+spec:
+  hostname: mysql
+  containers:
+  - name: mysql
+    image: mysql:5.7
+    env:
+    - name: MYSQL_ROOT_PASSWORD
+      value: password
+    - name: MYSQL_DATABASE
+      value: trainer
+    - name: MYSQL_USER
+      value: trainer_user
+    - name: MYSQL_PASSWORD
+      value: trainer_pass
+    ports:
+    - containerPort: 3306
+  - name: tracker-docker
+    image: bobcrutchley/tracker-docker
+    ports:
+    - containerPort: 8080
+

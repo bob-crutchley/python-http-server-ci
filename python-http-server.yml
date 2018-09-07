@@ -33,5 +33,5 @@ spec:
     targetPort: 9000
     protocol: TCP
   selector:
-    run: python-http-server
+    app: python-http-server
 
