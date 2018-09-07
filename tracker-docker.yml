@@ -1,7 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mysql
+  name: tracker-docker
+  labels:
+    app: tracker-docker
 spec:
   hostname: mysql
   containers:
@@ -18,7 +20,7 @@ spec:
       value: trainer_pass
     ports:
     - containerPort: 3306
-  - name: tracker-docker
+  - name: service
     image: bobcrutchley/tracker-docker
     ports:
     - containerPort: 8080

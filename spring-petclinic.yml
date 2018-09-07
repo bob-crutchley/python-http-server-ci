@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: spring-petclinic
+  labels:
+    app: spring-petclinic
+spec:
+  containers:
+  - name: angular
+    image: bobcrutchley/spring-petclinic-angular
+    ports:
+    - containerPort: 4200
+  - name: rest 
+    image: bobcrutchley/spring-petclinic-rest
+    ports:
+    - containerPort: 9966
+
