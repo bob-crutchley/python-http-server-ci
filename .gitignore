@@ -1,4 +1,4 @@
 jenkins/jobs
 !jenkins/jobs/*/config.xml
 !jenkins/jobs/README.md
-
+.vagrant
